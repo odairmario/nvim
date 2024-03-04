@@ -8,6 +8,13 @@ return {
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
     },
+    {
+      'SirVer/ultisnips',
+      dependencies = {
+        "quangnguyen30192/cmp-nvim-ultisnips",
+        "honza/vim-snippets"
+      },
+    },
   },
   {
     "hrsh7th/nvim-cmp",
@@ -19,6 +26,7 @@ return {
         snippet = {
           expand = function(args)
             require("luasnip").lsp_expand(args.body)
+            vim.fn["ultisnips#Anon"](args.body)
           end,
         },
         window = {
@@ -34,7 +42,8 @@ return {
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
-          { name = "luasnip" }, -- For luasnip users.
+          --{ name = "luasnip" }, -- For luasnip users.
+          { name = "ultisnips" }, -- For ultisnips users.
         }, {
           { name = "buffer" },
         }),
