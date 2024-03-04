@@ -1,3 +1,10 @@
+## 0.1.1 (2024-03-04)
+
+### Fix
+
+- **Plugin**: remove erb_d from the list of formattings plugins
+- **Plugin**: fix completions mappings
+
 ## 0.1.0 (2024-03-03)
 
 ### Feat
