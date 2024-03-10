@@ -1,3 +1,16 @@
+## 0.2.0 (2024-03-09)
+
+### Feat
+
+- **Plugin**: add solarized plugin
+- **Plugin**: add table-mode plugin
+- **Plugin**: add Ultisnips instead luasnipts
+
+### Fix
+
+- **Plugin**: configure more lsp-config
+- **Plugin**: set sphinx docstyle on utilsnips python style
+
 ## 0.1.1 (2024-03-04)
 
 ### Fix
