@@ -14,6 +14,9 @@ return {
         "quangnguyen30192/cmp-nvim-ultisnips",
         "honza/vim-snippets"
       },
+      config = function()
+        vim.g.ultisnips_python_style = 'sphinx' -- use sphinx docstyle
+      end
     },
   },
   {
