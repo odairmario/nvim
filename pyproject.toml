@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "nvim"
+version = "0.1.0"
+description = ""
+authors = ["Odair M. <odairmario45@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.27.0"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
