@@ -1,3 +1,23 @@
+## 0.3.0 (2024-06-08)
+
+### Feat
+
+- **Plugins**: add tmux completion
+
+## 0.3.0 (2024-03-10)
+
+### Feat
+
+- **Plugin**: add remark node depedency
+- **Plugin**: add autoclose plugin
+
+### Fix
+
+- **General**: add more vim options
+- **Plugin**: enable tablemode for markdown and text file
+- **Repo**: update plugin locker
+- **Repo**: add node_modules on .gitignore
+
 ## 0.2.0 (2024-06-08)
 
 ### Feat
