@@ -1,4 +1,9 @@
 
+-- load nvim configs
+require("configs.settings")
+require("configs.mappings")
+require("configs.autocommands")
+
 -- install package manage lazypath
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -14,6 +19,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
-
-require("vim-options") -- vim options
+--
 require("lazy").setup("plugins") -- load all plugins
