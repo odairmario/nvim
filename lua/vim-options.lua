@@ -8,6 +8,7 @@ vim.cmd("set number")
 vim.cmd("set textwidth=100")
 vim.cmd("set nowrap")
 
+
 vim.api.nvim_create_autocmd("FileType",  {
   command = [[ :set tabstop=4 :set smarttab :set shiftwidth=4 :set softtabstop=4 :set expandtab :set autoindent :set tw=79 ]],
   pattern = {"py"}
@@ -27,6 +28,7 @@ vim.keymap.set('n', '<leader>P', '"+p')
 vim.keymap.set('n', '<C-Down>', 'ddp')
 vim.keymap.set('n', '<C-Up>', 'ddkP')
 vim.keymap.set('n', 'cc', 'diwi')
+
 
 function SET_DIRECTORY(name, option_name, path)
   if (vim.fn.isdirectory(path)) then

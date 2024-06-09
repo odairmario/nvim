@@ -18,12 +18,18 @@ return {
         vim.g.ultisnips_python_style = 'sphinx' -- use sphinx docstyle
       end
     },
+    {
+      'andersevenrud/cmp-tmux', -- cmp-tmux
+    }
+  },
+  {
+    'hrsh7th/cmp-buffer'
   },
   {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require("cmp")
-      require("luasnip.loaders.from_vscode").lazy_load()
+      --require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.setup({
         snippet = {
@@ -44,13 +50,24 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
+          { name = "buffer",
+            option = {
+              get_bufnrs = function()
+                return vim.api.nvim_list_bufs()
+              end
+            }},
           { name = "nvim_lsp" },
           --{ name = "luasnip" }, -- For luasnip users.
           { name = "ultisnips" }, -- For ultisnips users.
-        }, {
-          { name = "buffer" },
+          { name = "tmux",
+            option = {
+              label = '[tmux]',
+              trigger_characters = {},
+
+            }
+          },
         }),
       })
-    end,
-  },
+    end
+  }
 }
