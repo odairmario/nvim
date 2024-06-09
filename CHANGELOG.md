@@ -1,3 +1,9 @@
+## 0.4.0 (2024-06-08)
+
+### Feat
+
+- **Plugins**: add tmux completion
+
 ## 0.3.0 (2024-06-08)
 
 ### Feat

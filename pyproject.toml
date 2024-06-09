@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nvim"
-version = "0.3.0"
+version = "0.4.0"
 description = ""
 authors = ["Odair M. <odairmario45@gmail.com>"]
 license = "MIT"
